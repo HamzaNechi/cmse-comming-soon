@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CMSE — Groupes électrogènes : vente, installation, réparation | Tunisie</title>
 <meta name="description" content="CMSE (Cap-Bon Maintenance et Services Électriques) : vente, installation et réparation de groupes électrogènes résidentiels et industriels en Tunisie.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='2' fill='%23111315'/%3E%3Cpath d='M13 3 5 14h5l-1 7 8-11h-5l1-7Z' fill='%23E8A93C'/%3E%3C/svg%3E">
+
+<link rel="alternate" hreflang="fr" href="index.html">
+<link rel="alternate" hreflang="ar" href="index-ar.html">
+<link rel="alternate" hreflang="en" href="index-en.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,22 +24,23 @@
 <header class="nav">
   <div class="wrap nav__inner">
     <a href="#top" class="nav__brand">
-      <!--<span class="nav__mark" aria-hidden="true"></span>
-      CMSE-->
-
       <img src="./logo.png" alt="Logo CMSE" width="130" height="auto">
     </a>
 
     <nav class="nav__links">
       <a href="#services">Services</a>
       <a href="#produits">Produits</a>
-      <a href="#methode">Méthode</a>
       <a href="#apropos">À propos</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="nav__actions">
-      <a class="nav__phone" href="tel:+21655915337">+216 55 915 337</a>
+      <div class="lang-switch" role="group" aria-label="Langue">
+        <a href="index.html"    data-lang="fr" class="lang-switch__item is-active" aria-current="true">FR</a>
+        <a href="index-ar.html" data-lang="ar" class="lang-switch__item">ع</a>
+        <a href="index-en.html" data-lang="en" class="lang-switch__item">EN</a>
+      </div>
+      <a class="nav__phone" href="https://wa.me/21655915337">+216 55 915 337</a>
       <a class="btn btn--accent" href="#contact">Demander un devis</a>
     </div>
 
@@ -45,10 +52,14 @@
   <div class="nav__mobile">
     <a href="#services">Services</a>
     <a href="#produits">Produits</a>
-    <a href="#methode">Méthode</a>
     <a href="#apropos">À propos</a>
     <a href="#contact">Contact</a>
-    <a class="nav__phone" href="tel:+21655915337">+216 55 915 337</a>
+    <a class="nav__phone" href="https://wa.me/21655915337">+216 55 915 337</a>
+    <div class="lang-switch lang-switch--mobile" role="group" aria-label="Langue">
+      <a href="index.html"    data-lang="fr" class="lang-switch__item is-active" aria-current="true">FR</a>
+      <a href="index-ar.html" data-lang="ar" class="lang-switch__item">ع</a>
+      <a href="index-en.html" data-lang="en" class="lang-switch__item">EN</a>
+    </div>
   </div>
 </header>
 
@@ -107,7 +118,6 @@
       </div>
 
       <div class="services__grid">
-
         <article class="card">
           <span class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 40 40" fill="none"><path d="M8 10h14l10 10-14 14L8 24V10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="14.5" cy="15.5" r="1.6" fill="currentColor"/></svg>
@@ -139,7 +149,6 @@
           <h3>Réparation &amp; dépannage</h3>
           <p>Diagnostic électrique et moteur, pièces d'origine, intervention rapide en cas de panne sur site.</p>
         </article>
-
       </div>
     </div>
   </section>
@@ -188,57 +197,62 @@
         </div>
       </div>
 
-
-       <div class="product">
-          <div class="product__figure">
-            <img src="./auto.png" alt="Groupe électrogène résidentiel insonorisé, vue en coupe" loading="lazy">
-          </div>
-          <div class="product__body">
-            <span class="product__tag">Automatisme &amp; contrôle</span>
-            <h3>Automates DSE</h3>
-            <p>Contrôleurs Deep Sea Electronics pour démarrage automatique, synchronisation et supervision de vos groupes électrogènes — installés et paramétrés par nos techniciens certifiés.</p>
-            <ul class="product__list">
-              <li>Démarrage / arrêt automatique sur coupure secteur</li>
-              <li>Synchronisation et répartition de charge multi-groupes</li>
-              <li>Supervision et alarmes à distance (GSM / réseau)</li>
-              <li>Rétrofit sur groupes existants, toutes marques</li>
-            </ul>
-            <a href="#contact" class="btn btn--outline">Demander une fiche technique</a>
-          </div>
+      <div class="product">
+        <div class="product__figure">
+          <img src="./auto.png" alt="Automate DSE de contrôle pour groupe électrogène" loading="lazy">
         </div>
+        <div class="product__body">
+          <span class="product__tag">Automatisme &amp; contrôle</span>
+          <h3>Automates DSE</h3>
+          <p>Contrôleurs Deep Sea Electronics pour démarrage automatique, synchronisation et supervision de vos groupes électrogènes — installés et paramétrés par nos techniciens certifiés.</p>
+          <ul class="product__list">
+            <li>Démarrage / arrêt automatique sur coupure secteur</li>
+            <li>Synchronisation et répartition de charge multi-groupes</li>
+            <li>Supervision et alarmes à distance (GSM / réseau)</li>
+            <li>Rétrofit sur groupes existants, toutes marques</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Demander une fiche technique</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- METHODE -->
-  <section id="methode" class="section">
+  <!-- PARTENAIRES -->
+  <section id="partenaires" class="section">
     <div class="wrap">
       <div class="section__head">
-        <h2>Comment ça marche</h2>
-        <p>Un projet type, du premier appel à la mise en service.</p>
+        <h2>Nos partenaires</h2>
+        <p>Deux marques de référence mondiale, choisies pour la fiabilité du matériel et la disponibilité des pièces.</p>
       </div>
 
-      <ol class="steps">
-        <li class="step">
-          <span class="step__num">01</span>
-          <h3>Diagnostic &amp; devis</h3>
-          <p>Étude de vos besoins en puissance et visite technique si nécessaire. Devis détaillé sous 48h.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">02</span>
-          <h3>Installation</h3>
-          <p>Livraison, mise en place, raccordement électrique et intégration au tableau existant.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">03</span>
-          <h3>Mise en service &amp; tests</h3>
-          <p>Essais en charge, réglages, formation rapide des utilisateurs sur site.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">04</span>
-          <h3>Suivi &amp; SAV</h3>
-          <p>Contrat d'entretien optionnel et assistance en cas de panne.</p>
-        </li>
-      </ol>
+      <div class="partners">
+        <article class="partner">
+          <div class="partner__head">
+            <span class="partner__mark" aria-hidden="true"><img src="./Rehlko_Logo.webp" alt="Logo Rehlko Power Systems" width="120" height="auto"></span>
+            <div>
+              <h3>Rehlko Power Systems</h3>
+              <span class="partner__role">Anciennement Kohler Power Systems</span>
+            </div>
+          </div>
+          <p>Partenaire pour la fourniture de groupes électrogènes et moteurs industriels, de la gamme résidentielle aux fortes puissances utilisées sur sites critiques.</p>
+          <a class="partner__link" href="https://www.powersystems.rehlko.com/emea/fr/home" target="_blank" rel="noopener">Voir le site Rehlko Power Systems →</a>
+        </article>
+
+        <article class="partner partner--featured">
+          <span class="partner__badge">Représentant officiel</span>
+          <div class="partner__head">
+            <span class="partner__mark" aria-hidden="true">
+              <img src="./dse.png" alt="Logo Deep Sea Electronics" width="120" height="auto">
+            </span>
+            <div>
+              <h3>Deep Sea Electronics</h3>
+              <span class="partner__role">Afrique du Nord &amp; Tunisie</span>
+            </div>
+          </div>
+          <p>CMSE est représentant officiel DSE en Afrique du Nord et en Tunisie : vente, installation, paramétrage et SAV des automates de contrôle pour groupes électrogènes.</p>
+          <a class="partner__link" href="https://www.deepseaelectronics.com/distributor/cmse">Voir les automates DSE →</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -246,7 +260,7 @@
   <section id="apropos" class="section section--dark">
     <div class="wrap about">
       <div class="about__text">
-        <h2>Cap-Bon Maintenance et Services Électriques</h2>
+        <h2 style="color: whitesmoke;">Cap-Bon Maintenance et Services Électriques</h2>
         <p>
           CMSE est une entreprise tunisienne spécialisée dans les groupes électrogènes :
           vente, installation, réparation et maintenance. Basée dans la région du Cap Bon,
@@ -260,18 +274,9 @@
         </p>
       </div>
       <div class="about__points">
-        <div class="point">
-          <span class="point__num">01</span>
-          <p>Matériel adapté à l'usage, pas surdimensionné par défaut</p>
-        </div>
-        <div class="point">
-          <span class="point__num">02</span>
-          <p>Pièces d'origine et techniciens formés sur les moteurs installés</p>
-        </div>
-        <div class="point">
-          <span class="point__num">03</span>
-          <p>Un seul interlocuteur, de la vente au contrat d'entretien</p>
-        </div>
+        <div class="point"><span class="point__num">01</span><p>Matériel adapté à l'usage, pas surdimensionné par défaut</p></div>
+        <div class="point"><span class="point__num">02</span><p>Pièces d'origine et techniciens formés sur les moteurs installés</p></div>
+        <div class="point"><span class="point__num">03</span><p>Un seul interlocuteur, de la vente au contrat d'entretien</p></div>
       </div>
     </div>
   </section>
@@ -281,30 +286,17 @@
     <div class="wrap contact">
       <div class="contact__info">
         <h2>Parlons de votre projet</h2>
-        <p>Décrivez votre besoin — nombre de kVA estimé, usage résidentiel ou industriel,
-          délai souhaité — et nous revenons vers vous avec un devis.</p>
+        <p>Décrivez votre besoin — nombre de kVA estimé, usage résidentiel ou industriel, délai souhaité — et nous revenons vers vous avec un devis.</p>
 
         <dl class="contact__details">
-          <div>
-            <dt>Téléphone</dt>
-            <dd><a href="tel:+21655915337">+216 55 915 337</a></dd>
-          </div>
-          <div>
-            <dt>E-mail</dt>
-            <dd><a href="mailto:cmse2k@gmail.com">cmse2k@gmail.com</a></dd>
-          </div>
-          <div>
-            <dt>Addresse</dt>
-            <dd>Tunisie, Nabeul, Tazarka</dd>
-          </div>
-          <div>
-            <dt>Zone d'intervention</dt>
-            <dd>Cap Bon &amp; toute la Tunisie</dd>
-          </div>
+          <div><dt>Téléphone</dt><dd><a href="https://wa.me/21655915337">+216 55 915 337</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:cmse2k@gmail.com">cmse2k@gmail.com</a></dd></div>
+          <div><dt>Adresse</dt><dd>Tunisie, Nabeul, Tazarka</dd></div>
+          <div><dt>Zone d'intervention</dt><dd>Cap Bon &amp; toute la Tunisie</dd></div>
         </dl>
       </div>
 
-      <form class="contact__form" action="mailto:cmse2k@gmail.com" method="post" enctype="text/plain">
+      <form class="contact__form" id="contactForm">
         <label for="name">Nom</label>
         <input id="name" name="Nom" type="text" required>
 
@@ -322,7 +314,7 @@
         <label for="message">Message</label>
         <textarea id="message" name="Message" rows="4"></textarea>
 
-        <button type="submit" class="btn btn--accent">Envoyer la demande</button>
+        <button type="submit" class="btn btn--accent">Envoyer sur WhatsApp</button>
       </form>
     </div>
   </section>
@@ -338,7 +330,6 @@
     <nav class="footer__links">
       <a href="#services">Services</a>
       <a href="#produits">Produits</a>
-      <a href="#methode">Méthode</a>
       <a href="#apropos">À propos</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -346,5 +337,44 @@
   </div>
 </footer>
 
+<script src="lang.js" defer></script>
+<script>
+(function(){
+  var WHATSAPP_NUMBER = "21655915337"; // format international sans "+" ni espaces
+
+  var form = document.getElementById("contactForm");
+  if (!form) return;
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    var name    = document.getElementById("name").value.trim();
+    var phone   = document.getElementById("phone").value.trim();
+    var need    = document.getElementById("need").value;
+    var message = document.getElementById("message").value.trim();
+
+    if (!name || !phone) {
+      form.reportValidity();
+      return;
+    }
+
+    var lines = [
+      "Nouvelle demande depuis le site CMSE",
+      "",
+      "Nom : " + name,
+      "Téléphone : " + phone,
+      "Besoin : " + need
+    ];
+    if (message) {
+      lines.push("Message : " + message);
+    }
+
+    var text = encodeURIComponent(lines.join("\n"));
+    var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text;
+
+    window.location.href = url;
+  });
+})();
+</script>
 </body>
 </html>
