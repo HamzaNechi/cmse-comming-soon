@@ -203,6 +203,102 @@
     </div>
   </section>
 
+
+
+  <!-- CATALOGUE: 4 PRODUCTS (insert between #produits and #partenaires in index-en.html) -->
+  <section id="catalogue" class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Available generator sets</h2>
+        <p>A selection of Rehlko models from 33 to 200 kVA. Contact us on WhatsApp or download the full technical datasheet.</p>
+      </div>
+
+      <div class="catalog">
+
+        <!-- 1: KD200 -->
+        <article class="pcard">
+          <span class="pcard__tag">Industrial</span>
+          <h3>KD200</h3>
+          <div class="pcard__power">
+            <span class="pcard__kva">200</span><span class="pcard__unit">kVA standby</span>
+          </div>
+          <ul class="pcard__specs">
+            <li>Prime: 182 kVA / 146 kW</li>
+            <li>Rehlko 6-cyl. turbo engine, 8.27 L</li>
+            <li>400/230 V – 50 Hz</li>
+            <li>APM303 / APM403 controller</li>
+          </ul>
+          <div class="pcard__actions">
+            <a class="btn btn--accent" target="_blank" rel="noopener"
+               href="https://wa.me/21655915337?text=Hello%20CMSE%2C%20I%20would%20like%20information%20and%20a%20quote%20for%20the%20Rehlko%20KD200%20(200%20kVA)%20generator%20set.">Contact us about this product</a>
+            <a class="btn btn--outline" href="assets/1.pdf" download="Datasheet-KD200.pdf">Download the datasheet</a>
+          </div>
+        </article>
+
+        <!-- 2: KD110 -->
+        <article class="pcard">
+          <span class="pcard__tag">Industrial</span>
+          <h3>KD110</h3>
+          <div class="pcard__power">
+            <span class="pcard__kva">110</span><span class="pcard__unit">kVA standby</span>
+          </div>
+          <ul class="pcard__specs">
+            <li>Prime: 100 kVA / 80 kW</li>
+            <li>Rehlko 4-cyl. turbo engine, 3.92 L</li>
+            <li>400/230 V – 50 Hz</li>
+            <li>APM303 / APM403 controller</li>
+          </ul>
+          <div class="pcard__actions">
+            <a class="btn btn--accent" target="_blank" rel="noopener"
+               href="https://wa.me/21655915337?text=Hello%20CMSE%2C%20I%20would%20like%20information%20and%20a%20quote%20for%20the%20Rehlko%20KD110%20(110%20kVA)%20generator%20set.">Contact us about this product</a>
+            <a class="btn btn--outline" href="assets/2.pdf" download="Datasheet-KD110.pdf">Download the datasheet</a>
+          </div>
+        </article>
+
+        <!-- 3: J33 -->
+        <article class="pcard">
+          <span class="pcard__tag">Residential &amp; commercial</span>
+          <h3>J33</h3>
+          <div class="pcard__power">
+            <span class="pcard__kva">33</span><span class="pcard__unit">kVA standby</span>
+          </div>
+          <ul class="pcard__specs">
+            <li>Prime: 30 kVA / 24 kW</li>
+            <li>John Deere 3-cyl. engine, 2.91 L</li>
+            <li>400/230 V – 50 Hz</li>
+            <li>Soundproof version: 74 dB(A) at 1 m</li>
+          </ul>
+          <div class="pcard__actions">
+            <a class="btn btn--accent" target="_blank" rel="noopener"
+               href="https://wa.me/21655915337?text=Hello%20CMSE%2C%20I%20would%20like%20information%20and%20a%20quote%20for%20the%20Rehlko%20J33%20(33%20kVA)%20generator%20set.">Contact us about this product</a>
+            <a class="btn btn--outline" href="assets/3.pdf" download="Datasheet-J33.pdf">Download the datasheet</a>
+          </div>
+        </article>
+
+        <!-- 4: J44 -->
+        <article class="pcard">
+          <span class="pcard__tag">Residential &amp; commercial</span>
+          <h3>J44</h3>
+          <div class="pcard__power">
+            <span class="pcard__kva">44</span><span class="pcard__unit">kVA standby</span>
+          </div>
+          <ul class="pcard__specs">
+            <li>Prime: 40 kVA / 32 kW</li>
+            <li>John Deere 3-cyl. turbo engine, 2.91 L</li>
+            <li>400/230 V – 50 Hz</li>
+            <li>Soundproof version: 76 dB(A) at 1 m</li>
+          </ul>
+          <div class="pcard__actions">
+            <a class="btn btn--accent" target="_blank" rel="noopener"
+               href="https://wa.me/21655915337?text=Hello%20CMSE%2C%20I%20would%20like%20information%20and%20a%20quote%20for%20the%20Rehlko%20J44%20(44%20kVA)%20generator%20set.">Contact us about this product</a>
+            <a class="btn btn--outline" href="assets/4.pdf" download="Datasheet-J44.pdf">Download the datasheet</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <section id="partenaires" class="section">
     <div class="wrap">
       <div class="section__head">
@@ -276,7 +372,7 @@
         </dl>
       </div>
 
-      <form class="contact__form" action="mailto:cmse2k@gmail.com" method="post" enctype="text/plain">
+      <form class="contact__form" id="contactForm">
         <label for="name">Name</label>
         <input id="name" name="Nom" type="text" required>
 
@@ -319,5 +415,43 @@
 </footer>
 
 <script src="lang.js" defer></script>
+<script>
+(function(){
+  var WHATSAPP_NUMBER = "21655915337"; // format international sans "+" ni espaces
+
+  var form = document.getElementById("contactForm");
+  if (!form) return;
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    var name    = document.getElementById("name").value.trim();
+    var phone   = document.getElementById("phone").value.trim();
+    var need    = document.getElementById("need").value;
+    var message = document.getElementById("message").value.trim();
+
+    if (!name || !phone) {
+      form.reportValidity();
+      return;
+    }
+
+    var lines = [
+      "Nouvelle demande depuis le site CMSE",
+      "",
+      "Nom : " + name,
+      "Téléphone : " + phone,
+      "Besoin : " + need
+    ];
+    if (message) {
+      lines.push("Message : " + message);
+    }
+
+    var text = encodeURIComponent(lines.join("\n"));
+    var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text;
+
+    window.location.href = url;
+  });
+})();
+</script>
 </body>
 </html>
